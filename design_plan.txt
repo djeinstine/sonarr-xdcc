@@ -1,0 +1,33 @@
+python:
+Create module to interact with main app api
+	-check periodically for undownloaded/monitored files 
+		**exponential decrease of retry time
+	-check main app download queue
+	-pass queued and/or missing files to py script
+		**use module to download files
+			module Notes:
+				+use db to store servers and channels
+				+make db persistent!
+				+keep use db to store indexers
+	-when files are downloaded pass delete via API
+		Notes: 
+			>use different download folder for files
+			>manage import manually via API
+
+orchestrator:
+	-?
+	
+front end:
+	-dash?
+	-what can it do?
+		**manage indexers
+		**manage downloads
+		**manage servers
+		**manage error
+	
+deployment:
+	-docker!
+	-configuration?
+	
+development:
+	-WSL
