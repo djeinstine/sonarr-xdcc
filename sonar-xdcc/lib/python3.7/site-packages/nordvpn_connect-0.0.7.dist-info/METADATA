@@ -1,0 +1,63 @@
+Metadata-Version: 2.1
+Name: nordvpn-connect
+Version: 0.0.7
+Summary: A Python library to connect to NordVPN, works on Windows and Linux
+Home-page: https://github.com/sorasful/nordvpn-connect
+Author: Sorasful
+Author-email: 
+License: MIT
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: psutil (==5.7.2)
+Requires-Dist: requests (==2.24.0)
+Requires-Dist: loguru (==0.5.3)
+
+# NordVPN-connect
+
+This repo has been forked from https://github.com/kboghe/NordVPN-switcher by Kristof Boghe.  
+Thank you for your work.   
+
+## Description
+This lib allows you to connect to a NordVPN server. Works on Windows and Linux. 
+
+## Install 
+
+``pip install nordvpn-connect``
+
+
+## Simple Usage
+
+````python
+from nordvpn_connect import initialize_vpn, rotate_VPN, close_vpn_connection
+
+# optional, use this on Linux and if you are not logged in when using nordvpn command
+
+settings = initialize_vpn("France")  # starts nordvpn and stuff
+rotate_VPN(settings)  # actually connect to server
+
+# YOUR STUFF
+
+close_vpn_connection(settings)
+
+````
+
+## Usage with credentials (Only Linux)
+
+If when you use `nordvpn` command it asks you for credentials, you'll need to provide them to the `initialize_vpn` function.
+
+````python
+from nordvpn_connect import initialize_vpn, rotate_VPN, close_vpn_connection
+
+# optional, use this on Linux and if you are not logged in when using nordvpn command
+
+settings = initialize_vpn("France", "USERNAME", "PASSWORD")  # starts nordvpn and stuff
+rotate_VPN(settings)  # actually connect to server
+
+# YOUR STUFF
+
+close_vpn_connection(settings)
+
+````
+
+
+
