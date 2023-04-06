@@ -7,7 +7,7 @@ from xdcc_dl.entities import XDCCPack, IrcServer
 #/msg CR-HOLLAND|NEW xdcc send #15
 #manual = XDCCPack(IrcServer("irc.rizon.net"), "CR-HOLLAND|NEW", 1)
 from_message = XDCCPack.from_xdcc_message("/msg CR-HOLLAND|NEW xdcc list")
-#search_results = SearchEngines.SUBSPLEASE.value.search("Boruto")
+search_results = SearchEngines.NIBL.value.search("Boruto")
 #combined = [manual] + from_message + search_results
 
 # Start download
